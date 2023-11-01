@@ -1,0 +1,46 @@
+<mvc:View xmlns:table="sap.ui.table" controllerName="sampleapp.controller.View"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="idPage" title="{i18n>title}">
+        <content>
+            <Table id="idSalesTable" items="{/SalesOrders}">
+                <headerToolbar>
+                    <OverflowToolbar>
+                        <Title text="{/Title}"></Title>
+                        <ToolbarSpacer/>
+                        <SearchField id="idSearchField" width="20%" ariaLabelledBy="Order" liveChange="onFilter" search="onSearch"/>
+                        <Button icon="sap-icon://sort" tooltip="Sort" press="onSort"></Button>
+                        <Button icon="sap-icon://group-2" tooltip="Group by" press="onGroup"></Button>
+                    </OverflowToolbar>
+                </headerToolbar>
+                <!-- 'columns' is the aggregation-->
+                <columns>
+                    <!-- 'Column' is the control-->
+                    <Column>
+                        <Text text="Sales Order Id" />
+                    </Column>
+                    <Column>
+                        <Text text="Customer Name" />
+                    </Column>
+                    <Column>
+                        <Text text="Status" />
+                    </Column>
+                    <Column>
+                        <Text text="Gross Amount" />
+                    </Column>
+                </columns>
+
+                <items>
+                    <ColumnListItem id="idColumnListItem" type="Navigation">
+                        <cells>
+                            <ObjectIdentifier title="{SalesOrderId}"/>
+                            <Text text="{CustomerName}"></Text>
+                            <ObjectStatus text="{Status}" icon="sap-icon://status-completed" state="{State}"></ObjectStatus>
+                            <ObjectNumber number="{GrossAmount}" unit="{Unit}"></ObjectNumber>
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </content>
+    </Page>
+</mvc:View>
