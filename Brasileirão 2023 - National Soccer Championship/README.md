@@ -1,6 +1,6 @@
 ## Brasileirão 2023
 
-This is my first ever SAPUI5 project. It is an application that get real-time data from an soccer [API](https://api-futebol.com.br/). It shows the classification table of the championship, the past and on going matches results and upcoming matches. The authorization API key used in the requests has been changed as the number of free requests is limited.
+This is my first ever SAPUI5 project. It is an application that get real-time data from a soccer [API](https://api-futebol.com.br/). It shows the classification table of the championship, the past and on going matches results and upcoming matches. The authorization API key used in the requests has been changed as the number of free requests is limited.
 
 ### Starting the application
 
